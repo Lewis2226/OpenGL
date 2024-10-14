@@ -1,0 +1,11 @@
+﻿main.obj : error LNK2019: símbolo externo glutInit sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo glutInitDisplayMode sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo glutInitWindowPosition sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo glutInitWindowSize sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo glutMainLoop sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo glutCreateWindow sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo glutSwapBuffers sin resolver al que se hace referencia en la función "void __cdecl display(void)" (?display@@YAXXZ)
+main.obj : error LNK2019: símbolo externo glutDisplayFunc sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo glutReshapeFunc sin resolver al que se hace referencia en la función main
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\lib\x64\glut32.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+C:\Users\Alumno\source\repos\OpenGLProject1\x64\Debug\OpenGLProject1.exe : fatal error LNK1120: 9 externos sin resolver
