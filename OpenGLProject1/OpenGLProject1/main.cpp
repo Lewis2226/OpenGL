@@ -25,7 +25,6 @@ void display() {
 //Bloque 1
     //Centro
 #pragma region
-    /*
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
     glTranslatef(0.0f, 0.0f, -10.0f);  // Set the posicion on the screen
@@ -76,12 +75,9 @@ void display() {
     glVertex3f(1.0f, -1.0f, 1.0f);
     glVertex3f(1.0f, -1.0f, -1.0f);
     glEnd();  // End of drawing color-cube
-    */
-
 #pragma endregion Cube_00 
     //centro der
 #pragma region
-    /*
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
     glTranslatef(2.5f, 0.0f, -10.0f);  // Set the posicion on the screen
@@ -132,11 +128,9 @@ void display() {
     glVertex3f(1.0f, -1.0f, 1.0f);
     glVertex3f(1.0f, -1.0f, -1.0f);
     glEnd();  // End of drawing color-cube
-    */
 #pragma endregion Cube_01
     //centro izq
 #pragma region
-    /*
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
     glTranslatef(-2.5f, 0.0f, -10.0f);  // Set the posicion on the screen
@@ -187,12 +181,9 @@ void display() {
     glVertex3f(1.0f, -1.0f, 1.0f);
     glVertex3f(1.0f, -1.0f, -1.0f);
     glEnd();  // End of drawing color-cube
-    */
-
 #pragma endregion Cube_02
     //Sub
 #pragma region
-    /*
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
     glTranslatef(0.0f, 2.5f, -10.0f);  // Set the posicion on the screen
@@ -243,11 +234,9 @@ void display() {
     glVertex3f(1.0f, -1.0f, 1.0f);
     glVertex3f(1.0f, -1.0f, -1.0f);
     glEnd();  // End of drawing color-cube
-    */
 #pragma endregion Cube_03
     //Sub der
 #pragma region
-    /*
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
     glTranslatef(2.5f, 2.5f, -10.0f);  // Set the posicion on the screen
@@ -298,11 +287,9 @@ void display() {
     glVertex3f(1.0f, -1.0f, 1.0f);
     glVertex3f(1.0f, -1.0f, -1.0f);
     glEnd();  // End of drawing color-cube
-    */
 #pragma endregion Cube_04
     //Sub izq
 #pragma region
-    /*
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
     glTranslatef(-2.5f, 2.5f, -10.0f);  // Set the posicion on the screen
@@ -353,11 +340,9 @@ void display() {
     glVertex3f(1.0f, -1.0f, 1.0f);
     glVertex3f(1.0f, -1.0f, -1.0f);
     glEnd();  // End of drawing color-cube
-    */
 #pragma endregion Cube_05
     //Inf
 #pragma region
-    /*
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
     glTranslatef(0.0f, -2.5f, -10.0f);  // Set the posicion on the screen
@@ -408,11 +393,9 @@ void display() {
     glVertex3f(1.0f, -1.0f, 1.0f);
     glVertex3f(1.0f, -1.0f, -1.0f);
     glEnd();  // End of drawing color-cube
-    */
 #pragma endregion Cube_06
     //Inf der
 #pragma region
-    /*
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
     glTranslatef(2.5f, -2.5f, -10.0f);  // Set the posicion on the screen
@@ -463,11 +446,9 @@ void display() {
     glVertex3f(1.0f, -1.0f, 1.0f);
     glVertex3f(1.0f, -1.0f, -1.0f);
     glEnd();  // End of drawing color-cube
-    */
 #pragma endregion Cube_07
     //Inf izq
 #pragma region
-    /*
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
     glTranslatef(-2.5f, -2.5f, -10.0f);  // Set the posicion on the screen
@@ -518,7 +499,6 @@ void display() {
     glVertex3f(1.0f, -1.0f, 1.0f);
     glVertex3f(1.0f, -1.0f, -1.0f);
     glEnd();  // End of drawing color-cube
-    */
 #pragma endregion Cube_08
 
 //Bloque 2
@@ -747,7 +727,7 @@ void display() {
 
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
-    glTranslatef(2.5f, 2.5f, -10.0f);  // Set the posicion on the screen
+    glTranslatef(2.5f, 2.5f, -12.5f);  // Set the posicion on the screen
 
 
     glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
@@ -802,7 +782,7 @@ void display() {
 
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
-    glTranslatef(-2.5f, 2.5f, -10.0f);  // Set the posicion on the screen
+    glTranslatef(-2.5f, 2.5f, -12.5f);  // Set the posicion on the screen
 
 
     glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
@@ -857,7 +837,7 @@ void display() {
 
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
-    glTranslatef(0.0f, -2.5f, -10.0f);  // Set the posicion on the screen
+    glTranslatef(0.0f, -2.5f, -12.5f);  // Set the posicion on the screen
 
 
     glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
@@ -912,7 +892,7 @@ void display() {
 
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
-    glTranslatef(2.5f, -2.5f, -10.0f);  // Set the posicion on the screen
+    glTranslatef(2.5f, -2.5f, -12.5f);  // Set the posicion on the screen
 
 
     glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
@@ -967,7 +947,64 @@ void display() {
 
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
-    glTranslatef(-2.5f, -2.5f, -10.0f);  // Set the posicion on the screen
+    glTranslatef(-2.5f, -2.5f, -12.5f);  // Set the posicion on the screen
+
+
+    glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
+
+    // Top face (y = 1.0f)
+    // Define vertices in counter-clockwise (CCW) order with normal pointing out
+    glColor3f(0.0f, 1.0f, 0.0f);     // Green
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+
+    // Bottom face (y = -1.0f)
+    glColor3f(1.0f, 0.5f, 0.0f);     // Orange
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+
+    // Front face  (z = 1.0f)
+    glColor3f(1.0f, 0.0f, 0.0f);     // Red
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+
+    // Back face (z = -1.0f)
+    glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, -1.0f);
+
+    // Left face (x = -1.0f)
+    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+
+    // Right face (x = 1.0f)
+    glColor3f(0.5f, 0.5f, 0.5);     // Violet
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glEnd();  // End of drawing color-cube
+    
+#pragma endregion Cube_17
+
+//Bloque 3
+    //Centro
+#pragma region
+
+// Render a color-cube consisting of 6 quads with different colors
+    glLoadIdentity();                 // Reset the model-view matrix
+    glTranslatef(0.0f, 0.0f, -15.0f);  // Set the posicion on the screen
 
 
     glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
@@ -1016,7 +1053,447 @@ void display() {
     glVertex3f(1.0f, -1.0f, -1.0f);
     glEnd();  // End of drawing color-cube
 
-#pragma endregion Cube_17
+#pragma endregion Cube_18 
+    //centro der
+#pragma region
+
+    // Render a color-cube consisting of 6 quads with different colors
+    glLoadIdentity();                 // Reset the model-view matrix
+    glTranslatef(2.5f, 0.0f, -15.0f);  // Set the posicion on the screen
+
+
+    glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
+
+    // Top face (y = 1.0f)
+    // Define vertices in counter-clockwise (CCW) order with normal pointing out
+    glColor3f(0.0f, 1.0f, 0.0f);     // Green
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+
+    // Bottom face (y = -1.0f)
+    glColor3f(1.0f, 0.5f, 0.0f);     // Orange
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+
+    // Front face  (z = 1.0f)
+    glColor3f(1.0f, 0.0f, 0.0f);     // Red
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+
+    // Back face (z = -1.0f)
+    glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, -1.0f);
+
+    // Left face (x = -1.0f)
+    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+
+    // Right face (x = 1.0f)
+    glColor3f(0.5f, 0.5f, 0.5);     // Violet
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glEnd();  // End of drawing color-cube
+
+#pragma endregion Cube_19
+    //centro izq
+#pragma region
+
+    // Render a color-cube consisting of 6 quads with different colors
+    glLoadIdentity();                 // Reset the model-view matrix
+    glTranslatef(-2.5f, 0.0f, -15.0f);  // Set the posicion on the screen
+
+
+    glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
+
+    // Top face (y = 1.0f)
+    // Define vertices in counter-clockwise (CCW) order with normal pointing out
+    glColor3f(0.0f, 1.0f, 0.0f);     // Green
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+
+    // Bottom face (y = -1.0f)
+    glColor3f(1.0f, 0.5f, 0.0f);     // Orange
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+
+    // Front face  (z = 1.0f)
+    glColor3f(1.0f, 0.0f, 0.0f);     // Red
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+
+    // Back face (z = -1.0f)
+    glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, -1.0f);
+
+    // Left face (x = -1.0f)
+    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+
+    // Right face (x = 1.0f)
+    glColor3f(0.5f, 0.5f, 0.5);     // Violet
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glEnd();  // End of drawing color-cube
+
+#pragma endregion Cube_20
+    //Sub
+#pragma region
+
+    // Render a color-cube consisting of 6 quads with different colors
+    glLoadIdentity();                 // Reset the model-view matrix
+    glTranslatef(0.0f, 2.5f, -15.0f);  // Set the posicion on the screen
+
+
+    glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
+
+    // Top face (y = 1.0f)
+    // Define vertices in counter-clockwise (CCW) order with normal pointing out
+    glColor3f(0.0f, 1.0f, 0.0f);     // Green
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+
+    // Bottom face (y = -1.0f)
+    glColor3f(1.0f, 0.5f, 0.0f);     // Orange
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+
+    // Front face  (z = 1.0f)
+    glColor3f(1.0f, 0.0f, 0.0f);     // Red
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+
+    // Back face (z = -1.0f)
+    glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, -1.0f);
+
+    // Left face (x = -1.0f)
+    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+
+    // Right face (x = 1.0f)
+    glColor3f(0.5f, 0.5f, 0.5);     // Violet
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glEnd();  // End of drawing color-cube
+
+#pragma endregion Cube_21
+    //Sub der
+#pragma region
+
+    // Render a color-cube consisting of 6 quads with different colors
+    glLoadIdentity();                 // Reset the model-view matrix
+    glTranslatef(2.5f, 2.5f, -15.0f);  // Set the posicion on the screen
+
+
+    glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
+
+    // Top face (y = 1.0f)
+    // Define vertices in counter-clockwise (CCW) order with normal pointing out
+    glColor3f(0.0f, 1.0f, 0.0f);     // Green
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+
+    // Bottom face (y = -1.0f)
+    glColor3f(1.0f, 0.5f, 0.0f);     // Orange
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+
+    // Front face  (z = 1.0f)
+    glColor3f(1.0f, 0.0f, 0.0f);     // Red
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+
+    // Back face (z = -1.0f)
+    glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, -1.0f);
+
+    // Left face (x = -1.0f)
+    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+
+    // Right face (x = 1.0f)
+    glColor3f(0.5f, 0.5f, 0.5);     // Violet
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glEnd();  // End of drawing color-cube
+
+#pragma endregion Cube_22
+    //Sub izq
+#pragma region
+
+    // Render a color-cube consisting of 6 quads with different colors
+    glLoadIdentity();                 // Reset the model-view matrix
+    glTranslatef(-2.5f, 2.5f, -15.0f);  // Set the posicion on the screen
+
+
+    glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
+
+    // Top face (y = 1.0f)
+    // Define vertices in counter-clockwise (CCW) order with normal pointing out
+    glColor3f(0.0f, 1.0f, 0.0f);     // Green
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+
+    // Bottom face (y = -1.0f)
+    glColor3f(1.0f, 0.5f, 0.0f);     // Orange
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+
+    // Front face  (z = 1.0f)
+    glColor3f(1.0f, 0.0f, 0.0f);     // Red
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+
+    // Back face (z = -1.0f)
+    glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, -1.0f);
+
+    // Left face (x = -1.0f)
+    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+
+    // Right face (x = 1.0f)
+    glColor3f(0.5f, 0.5f, 0.5);     // Violet
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glEnd();  // End of drawing color-cube
+
+#pragma endregion Cube_23
+    //Inf
+#pragma region
+
+    // Render a color-cube consisting of 6 quads with different colors
+    glLoadIdentity();                 // Reset the model-view matrix
+    glTranslatef(0.0f, -2.5f, -15.0f);  // Set the posicion on the screen
+
+
+    glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
+
+    // Top face (y = 1.0f)
+    // Define vertices in counter-clockwise (CCW) order with normal pointing out
+    glColor3f(0.0f, 1.0f, 0.0f);     // Green
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+
+    // Bottom face (y = -1.0f)
+    glColor3f(1.0f, 0.5f, 0.0f);     // Orange
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+
+    // Front face  (z = 1.0f)
+    glColor3f(1.0f, 0.0f, 0.0f);     // Red
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+
+    // Back face (z = -1.0f)
+    glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, -1.0f);
+
+    // Left face (x = -1.0f)
+    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+
+    // Right face (x = 1.0f)
+    glColor3f(0.5f, 0.5f, 0.5);     // Violet
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glEnd();  // End of drawing color-cube
+
+#pragma endregion Cube_24
+    //Inf der
+#pragma region
+
+    // Render a color-cube consisting of 6 quads with different colors
+    glLoadIdentity();                 // Reset the model-view matrix
+    glTranslatef(2.5f, -2.5f, -15.0f);  // Set the posicion on the screen
+
+
+    glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
+
+    // Top face (y = 1.0f)
+    // Define vertices in counter-clockwise (CCW) order with normal pointing out
+    glColor3f(0.0f, 1.0f, 0.0f);     // Green
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+
+    // Bottom face (y = -1.0f)
+    glColor3f(1.0f, 0.5f, 0.0f);     // Orange
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+
+    // Front face  (z = 1.0f)
+    glColor3f(1.0f, 0.0f, 0.0f);     // Red
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+
+    // Back face (z = -1.0f)
+    glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, -1.0f);
+
+    // Left face (x = -1.0f)
+    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+
+    // Right face (x = 1.0f)
+    glColor3f(0.5f, 0.5f, 0.5);     // Violet
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glEnd();  // End of drawing color-cube
+
+#pragma endregion Cube_25
+    //Inf izq
+#pragma region
+
+    // Render a color-cube consisting of 6 quads with different colors
+    glLoadIdentity();                 // Reset the model-view matrix
+    glTranslatef(-2.5f, -2.5f, -15.0f);  // Set the posicion on the screen
+
+
+    glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
+
+    // Top face (y = 1.0f)
+    // Define vertices in counter-clockwise (CCW) order with normal pointing out
+    glColor3f(0.0f, 1.0f, 0.0f);     // Green
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+
+    // Bottom face (y = -1.0f)
+    glColor3f(1.0f, 0.5f, 0.0f);     // Orange
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+
+    // Front face  (z = 1.0f)
+    glColor3f(1.0f, 0.0f, 0.0f);     // Red
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+
+    // Back face (z = -1.0f)
+    glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, -1.0f);
+
+    // Left face (x = -1.0f)
+    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+
+    // Right face (x = 1.0f)
+    glColor3f(0.5f, 0.5f, 0.5);     // Violet
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glEnd();  // End of drawing color-cube
+
+#pragma endregion Cube_26
 
 #pragma region 
     /*
