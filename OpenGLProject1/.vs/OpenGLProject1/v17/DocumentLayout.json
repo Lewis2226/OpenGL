@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\WINDOWS\\Documents\\GitHub\\OpenGL\\OpenGLProject1\\",
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\GitHub\\OpenGL\\OpenGLProject1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{160CC4EC-9AF9-4F6A-8601-ABF9C7C6AE77}|OpenGLProject1\\OpenGLProject1.vcxproj|C:\\Users\\WINDOWS\\Documents\\GitHub\\OpenGL\\OpenGLProject1\\OpenGLProject1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{160CC4EC-9AF9-4F6A-8601-ABF9C7C6AE77}|OpenGLProject1\\OpenGLProject1.vcxproj|C:\\Users\\Alumno\\Documents\\GitHub\\OpenGL\\OpenGLProject1\\OpenGLProject1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{160CC4EC-9AF9-4F6A-8601-ABF9C7C6AE77}|OpenGLProject1\\OpenGLProject1.vcxproj|solutionrelative:OpenGLProject1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -32,11 +32,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\WINDOWS\\Documents\\GitHub\\OpenGL\\OpenGLProject1\\OpenGLProject1\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\OpenGL\\OpenGLProject1\\OpenGLProject1\\main.cpp",
               "RelativeDocumentMoniker": "OpenGLProject1\\main.cpp",
-              "ToolTip": "C:\\Users\\WINDOWS\\Documents\\GitHub\\OpenGL\\OpenGLProject1\\OpenGLProject1\\main.cpp",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\OpenGL\\OpenGLProject1\\OpenGLProject1\\main.cpp",
               "RelativeToolTip": "OpenGLProject1\\main.cpp",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAjwO4AAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-07T15:29:32.924Z",
               "EditorCaption": ""
