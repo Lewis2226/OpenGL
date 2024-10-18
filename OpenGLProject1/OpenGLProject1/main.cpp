@@ -5,7 +5,7 @@
 #include <GL/glut.h>  // GLUT, include glu.h and gl.h
 
  /* Global variables */
-char title[] = "3D Shapes";
+char title[] = "Rubik Cube";
 
 /* Initialize OpenGL Graphics */
 void initGL() {
