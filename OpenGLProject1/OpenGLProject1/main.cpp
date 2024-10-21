@@ -28,7 +28,7 @@ void display() {
     // Render a color-cube consisting of 6 quads with different colors
     glLoadIdentity();                 // Reset the model-view matrix
     glTranslatef(0.0f, 0.0f, -10.0f);  // Set the posicion on the screen
-
+    
     glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
 
     // Top face (y = 1.0f)
@@ -81,7 +81,6 @@ void display() {
     glLoadIdentity();                 // Reset the model-view matrix
     glTranslatef(2.5f, 0.0f, -10.0f);  // Set the posicion on the screen
     glRotatef(90, 0.0, 0.0, 1.0);
-
     glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
 
     // Top face (y = 1.0f)
