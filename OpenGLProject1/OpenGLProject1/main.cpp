@@ -1493,49 +1493,14 @@ void display() {
 
 #pragma endregion Cube_26
 
-#pragma region 
-    /*
-    // Render a pyramid consists of 4 triangles
-    glLoadIdentity();                  // Reset the model-view matrix
-    glTranslatef(-1.5f, 0.0f, -6.0f);  // Move left and into the screen
-
-    glBegin(GL_TRIANGLES);           // Begin drawing the pyramid with 4 triangles
-    // Front
-    glColor3f(1.0f, 0.0f, 0.0f);     // Red
-    glVertex3f(0.0f, 1.0f, 0.0f);
-    glColor3f(0.0f, 1.0f, 0.0f);     // Green
-    glVertex3f(-1.0f, -1.0f, 1.0f);
-    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
-    glVertex3f(1.0f, -1.0f, 1.0f);
-
-    // Right
-    glColor3f(1.0f, 0.0f, 0.0f);     // Red
-    glVertex3f(0.0f, 1.0f, 0.0f);
-    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
-    glVertex3f(1.0f, -1.0f, 1.0f);
-    glColor3f(0.0f, 1.0f, 0.0f);     // Green
-    glVertex3f(1.0f, -1.0f, -1.0f);
-
-    // Back
-    glColor3f(1.0f, 0.0f, 0.0f);     // Red
-    glVertex3f(0.0f, 1.0f, 0.0f);
-    glColor3f(0.0f, 1.0f, 0.0f);     // Green
-    glVertex3f(1.0f, -1.0f, -1.0f);
-    glColor3f(0.0f, 0.0f, 1.0f);     // Blue
-    glVertex3f(-1.0f, -1.0f, -1.0f);
-
-    // Left
-    glColor3f(1.0f, 0.0f, 0.0f);       // Red
-    glVertex3f(0.0f, 1.0f, 0.0f);
-    glColor3f(0.0f, 0.0f, 1.0f);       // Blue
-    glVertex3f(-1.0f, -1.0f, -1.0f);
-    glColor3f(0.0f, 1.0f, 0.0f);       // Green
-    glVertex3f(-1.0f, -1.0f, 1.0f);
-    glEnd();   // Done drawing the pyramid
-    */
-#pragma endregion Pyramid
     glutSwapBuffers();  // Swap the front and back frame buffers (double buffering)
 }
+
+void rotation() 
+{
+
+}
+
 
 /* Handler for window re-size event. Called back when the window first appears and
    whenever the window is re-sized with its new width and height */
