@@ -2,10 +2,12 @@
 
 float rotationAngle = .0f;  // Ángulo de rotación para la cara
 bool rotatingx = false;       // Bandera para indicar si estamos rotando
-bool rotatingy = false;       // Bandera para indicar si estamos rotando
+bool rotatingy = false;       // Bandera para indicar si estamos rotando   
+bool rotatingz = false;     // Bandera para indicar si estamos rotando
 float depthOffset = 0;  // Distancia inicial de los cubos para que sean visibles
 int rotatingColumn = -1;
 int rotatingRow = -1;
+int rotatingColumn2 = -1;
 
 void initGL() {
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
@@ -21,44 +23,28 @@ void drawCube(float x, float y, float z) {
     glTranslatef(x, y, z + depthOffset); 
 
     glBegin(GL_QUADS);
-    // Top face (y = 1.0f)
-    glColor3f(0.0f, 1.0f, 0.0f); 
-    glVertex3f(1.0f, 1.0f, -1.0f);
-    glVertex3f(-1.0f, 1.0f, -1.0f);
-    glVertex3f(-1.0f, 1.0f, 1.0f);
-    glVertex3f(1.0f, 1.0f, 1.0f);
 
-    // Resto de las caras
+    float s = 1.0f;
+
+    glColor3f(0.0f, 1.0f, 0.0f);
+    glVertex3f(s, s, -s); glVertex3f(-s, s, -s); glVertex3f(-s, s, s); glVertex3f(s, s, s);
+
     glColor3f(1.0f, 0.5f, 0.0f);
-    glVertex3f(1.0f, -1.0f, 1.0f);
-    glVertex3f(-1.0f, -1.0f, 1.0f);
-    glVertex3f(-1.0f, -1.0f, -1.0f);
-    glVertex3f(1.0f, -1.0f, -1.0f);
+    glVertex3f(s, -s, s); glVertex3f(-s, -s, s); glVertex3f(-s, -s, -s); glVertex3f(s, -s, -s);
 
-    glColor3f(1.0f, 0.0f, 0.0f); 
-    glVertex3f(1.0f, 1.0f, 1.0f);
-    glVertex3f(-1.0f, 1.0f, 1.0f);
-    glVertex3f(-1.0f, -1.0f, 1.0f);
-    glVertex3f(1.0f, -1.0f, 1.0f);
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glVertex3f(s, s, s); glVertex3f(-s, s, s); glVertex3f(-s, -s, s); glVertex3f(s, -s, s);
 
-    glColor3f(1.0f, 1.0f, 0.0f); 
-    glVertex3f(1.0f, -1.0f, -1.0f);
-    glVertex3f(-1.0f, -1.0f, -1.0f);
-    glVertex3f(-1.0f, 1.0f, -1.0f);
-    glVertex3f(1.0f, 1.0f, -1.0f);
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glVertex3f(s, -s, -s); glVertex3f(-s, -s, -s); glVertex3f(-s, s, -s); glVertex3f(s, s, -s);
 
-    glColor3f(0.0f, 0.0f, 1.0f); 
-    glVertex3f(-1.0f, 1.0f, 1.0f);
-    glVertex3f(-1.0f, 1.0f, -1.0f);
-    glVertex3f(-1.0f, -1.0f, -1.0f);
-    glVertex3f(-1.0f, -1.0f, 1.0f);
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex3f(-s, s, s); glVertex3f(-s, s, -s); glVertex3f(-s, -s, -s); glVertex3f(-s, -s, s);
 
-    glColor3f(1.0f, 0.0f, 1.0f); 
-    glVertex3f(1.0f, 1.0f, -1.0f);
-    glVertex3f(1.0f, 1.0f, 1.0f);
-    glVertex3f(1.0f, -1.0f, 1.0f);
-    glVertex3f(1.0f, -1.0f, -1.0f);
+    glColor3f(1.0f, 0.0f, 1.0f);
+    glVertex3f(s, s, -s); glVertex3f(s, s, s); glVertex3f(s, -s, s); glVertex3f(s, -s, -s);
     glEnd();
+
     glPopMatrix();
 }
 
@@ -72,7 +58,7 @@ void display() {
     for (int x = -1; x <= 1; ++x) {
         for (int y = -1; y <= 1; ++y) {
             for (int z = -1; z <= 1; ++z) {
-                if (rotatingx && rotatingColumn == x && !rotatingy) {
+                if (rotatingx && rotatingColumn == x && !rotatingy && !rotatingz) {
                     // Si la columna es la que está rotando
                     glPushMatrix();
                     glTranslatef(x * spacing, 0.0f, 0.0f);
@@ -82,12 +68,22 @@ void display() {
                     glPopMatrix();
                 }
 
-                else if (rotatingy && rotatingRow == y && !rotatingx) {
+                else if (rotatingy && rotatingRow == y && !rotatingx && !rotatingz) {
                     // Si la columna es la que está rotando
                     glPushMatrix();
                     glTranslatef(0.0f, y * spacing, 0.0f);
                     glRotatef(rotationAngle, 0.0f, 1.0f, 0.0f);
                     glTranslatef(0.0f, -y * spacing, 0.0f);
+                    drawCube(x * spacing, y * spacing, z * spacing);
+                    glPopMatrix();
+                }
+
+                else if (rotatingz && rotatingColumn2 == z && !rotatingx && !rotatingy) {
+                    // Si la columna es la que está rotando
+                    glPushMatrix();
+                    glTranslatef(0.0f,  0.0f, z * spacing);
+                    glRotatef(rotationAngle, 0.0f, 0.0f, 1.0f);
+                    glTranslatef(0.0f,  0.0f, - z * spacing);
                     drawCube(x * spacing, y * spacing, z * spacing);
                     glPopMatrix();
                 }
@@ -107,6 +103,7 @@ void timer(int value) {
             rotationAngle = 0.0f;
             rotatingx = false;
             rotatingy = false;
+            rotatingz = false;
         }
     }
     glutPostRedisplay();
@@ -133,6 +130,9 @@ void keyboard(unsigned char key, int x, int y) {
     case '4': rotatingRow = -1; rotatingy = true; break; // Columna izquierda
     case '5': rotatingRow = 0; rotatingy = true; break;  // Columna central
     case '6': rotatingRow = 1; rotatingy = true; break;  // Columna derecha
+    case '7': rotatingRow = -1; rotatingz = true; break; // Columna izquierda
+    case '8': rotatingRow = 0; rotatingz = true; break;  // Columna central
+    case '9': rotatingRow = 1; rotatingz = true; break;  // Columna derecha
     }
 }
 
