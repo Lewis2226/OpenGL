@@ -3,7 +3,7 @@
 float rotationAngle = .0f;  // Ángulo de rotación para la cara
 bool rotatingx = false;       // Bandera para indicar si estamos rotando
 bool rotatingy = false;       // Bandera para indicar si estamos rotando
-float depthOffset = -12.0f;  // Distancia inicial de los cubos para que sean visibles
+float depthOffset = 0;  // Distancia inicial de los cubos para que sean visibles
 int rotatingColumn = -1;
 int rotatingRow = -1;
 
@@ -72,7 +72,7 @@ void display() {
     for (int x = -1; x <= 1; ++x) {
         for (int y = -1; y <= 1; ++y) {
             for (int z = -1; z <= 1; ++z) {
-                if (rotatingx && rotatingColumn == x) {
+                if (rotatingx && rotatingColumn == x && !rotatingy) {
                     // Si la columna es la que está rotando
                     glPushMatrix();
                     glTranslatef(x * spacing, 0.0f, 0.0f);
@@ -82,7 +82,7 @@ void display() {
                     glPopMatrix();
                 }
 
-                else if (rotatingy && rotatingRow == y) {
+                else if (rotatingy && rotatingRow == y && !rotatingx) {
                     // Si la columna es la que está rotando
                     glPushMatrix();
                     glTranslatef(0.0f, y * spacing, 0.0f);
@@ -99,10 +99,11 @@ void display() {
     }
     glutSwapBuffers();
 }
+
 void timer(int value) {
     if (rotatingx || rotatingy) {
         rotationAngle += 2.5f;
-        if (rotationAngle >= 180.0f) {
+        if (rotationAngle >= 90.0f) {
             rotationAngle = 0.0f;
             rotatingx = false;
             rotatingy = false;
@@ -118,7 +119,10 @@ void reshape(GLsizei width, GLsizei height) {
     glViewport(0, 0, width, height);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(45.0f, aspect, 0.1f, 100.0f);
+    gluPerspective(45.0f, aspect, .1f, 100.0f);
+    gluLookAt(0.0, 0.0, 15.0,
+        0.0, 0.0, 0.0,
+        0.0, 1.0, 0.0);
 }
 
 void keyboard(unsigned char key, int x, int y) {
