@@ -1,4 +1,5 @@
 #include <GL/glut.h>
+#include <iostream>
 
 float rotationAngle = .0f;  // Ángulo de rotación para la cara
 bool rotatingx = false;       // Bandera para indicar si estamos rotando
@@ -59,7 +60,7 @@ void display() {
         for (int y = -1; y <= 1; ++y) {
             for (int z = -1; z <= 1; ++z) {
                 if (rotatingx && rotatingColumn == x && !rotatingy && !rotatingz) {
-                    // Si la columna es la que está rotando
+                    
                     glPushMatrix();
                     glTranslatef(x * spacing, 0.0f, 0.0f);
                     glRotatef(rotationAngle, 1.0f, 0.0f, 0.0f);
@@ -69,7 +70,7 @@ void display() {
                 }
 
                 else if (rotatingy && rotatingRow == y && !rotatingx && !rotatingz) {
-                    // Si la columna es la que está rotando
+                    
                     glPushMatrix();
                     glTranslatef(0.0f, y * spacing, 0.0f);
                     glRotatef(rotationAngle, 0.0f, 1.0f, 0.0f);
@@ -79,13 +80,14 @@ void display() {
                 }
 
                 else if (rotatingz && rotatingColumn2 == z && !rotatingx && !rotatingy) {
-                    // Si la columna es la que está rotando
+                    
                     glPushMatrix();
                     glTranslatef(0.0f,  0.0f, z * spacing);
                     glRotatef(rotationAngle, 0.0f, 0.0f, 1.0f);
                     glTranslatef(0.0f,  0.0f, - z * spacing);
                     drawCube(x * spacing, y * spacing, z * spacing);
                     glPopMatrix();
+                    
                 }
                 else {
                     drawCube(x * spacing, y * spacing, z * spacing);
@@ -130,9 +132,9 @@ void keyboard(unsigned char key, int x, int y) {
     case '4': rotatingRow = -1; rotatingy = true; break; // Columna izquierda
     case '5': rotatingRow = 0; rotatingy = true; break;  // Columna central
     case '6': rotatingRow = 1; rotatingy = true; break;  // Columna derecha
-    case '7': rotatingRow = -1; rotatingz = true; break; // Columna izquierda
-    case '8': rotatingRow = 0; rotatingz = true; break;  // Columna central
-    case '9': rotatingRow = 1; rotatingz = true; break;  // Columna derecha
+    case '7': rotatingColumn2 = -1; rotatingz = true; break; // Columna izquierda
+    case '8': rotatingColumn2 = 0; rotatingz = true; break;  // Columna central
+    case '9': rotatingColumn2 = 1; rotatingz = true; break;  // Columna derecha
     }
 }
 
