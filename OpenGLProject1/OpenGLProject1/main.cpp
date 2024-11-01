@@ -1,9 +1,11 @@
 #include <GL/glut.h>
 
 float rotationAngle = .0f;  // Ángulo de rotación para la cara
-bool rotating = false;       // Bandera para indicar si estamos rotando
+bool rotatingx = false;       // Bandera para indicar si estamos rotando
+bool rotatingy = false;       // Bandera para indicar si estamos rotando
 float depthOffset = -12.0f;  // Distancia inicial de los cubos para que sean visibles
 int rotatingColumn = -1;
+int rotatingRow = -1;
 
 void initGL() {
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
@@ -70,12 +72,22 @@ void display() {
     for (int x = -1; x <= 1; ++x) {
         for (int y = -1; y <= 1; ++y) {
             for (int z = -1; z <= 1; ++z) {
-                if (rotating && rotatingColumn == x) {
+                if (rotatingx && rotatingColumn == x) {
                     // Si la columna es la que está rotando
                     glPushMatrix();
                     glTranslatef(x * spacing, 0.0f, 0.0f);
-                    glRotatef(rotationAngle, 0.0f, 1.0f, 0.0f);
+                    glRotatef(rotationAngle, 1.0f, 0.0f, 0.0f);
                     glTranslatef(-x * spacing, 0.0f, 0.0f);
+                    drawCube(x * spacing, y * spacing, z * spacing);
+                    glPopMatrix();
+                }
+
+                else if (rotatingy && rotatingRow == y) {
+                    // Si la columna es la que está rotando
+                    glPushMatrix();
+                    glTranslatef(0.0f, y * spacing, 0.0f);
+                    glRotatef(rotationAngle, 0.0f, 1.0f, 0.0f);
+                    glTranslatef(0.0f, -y * spacing, 0.0f);
                     drawCube(x * spacing, y * spacing, z * spacing);
                     glPopMatrix();
                 }
@@ -88,11 +100,12 @@ void display() {
     glutSwapBuffers();
 }
 void timer(int value) {
-    if (rotating) {
+    if (rotatingx || rotatingy) {
         rotationAngle += 2.5f;
-        if (rotationAngle >= 90.0f) {
+        if (rotationAngle >= 180.0f) {
             rotationAngle = 0.0f;
-            rotating = false;
+            rotatingx = false;
+            rotatingy = false;
         }
     }
     glutPostRedisplay();
@@ -110,9 +123,12 @@ void reshape(GLsizei width, GLsizei height) {
 
 void keyboard(unsigned char key, int x, int y) {
     switch (key) {
-    case '1': rotatingColumn = -1; rotating = true; break; // Columna izquierda
-    case '2': rotatingColumn = 0; rotating = true; break;  // Columna central
-    case '3': rotatingColumn = 1; rotating = true; break;  // Columna derecha
+    case '1': rotatingColumn = -1; rotatingx = true; break; // Columna izquierda
+    case '2': rotatingColumn = 0; rotatingx = true; break;  // Columna central
+    case '3': rotatingColumn = 1; rotatingx = true; break;  // Columna derecha
+    case '4': rotatingRow = -1; rotatingy = true; break; // Columna izquierda
+    case '5': rotatingRow = 0; rotatingy = true; break;  // Columna central
+    case '6': rotatingRow = 1; rotatingy = true; break;  // Columna derecha
     }
 }
 
