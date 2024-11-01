@@ -1,11 +1,12 @@
 #include <GL/glut.h>
 
-float rotationAngle = 45.0f;  // Ángulo de rotación para la cara
+float rotationAngle = .0f;  // Ángulo de rotación para la cara
 bool rotating = false;       // Bandera para indicar si estamos rotando
 float depthOffset = -12.0f;  // Distancia inicial de los cubos para que sean visibles
+int rotatingColumn = -1;
 
 void initGL() {
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glClearDepth(1.0f);
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
@@ -15,7 +16,7 @@ void initGL() {
 
 void drawCube(float x, float y, float z) {
     glPushMatrix();
-    glTranslatef(x, y, z + depthOffset); // Mueve en el eje Z usando depthOffset
+    glTranslatef(x, y, z + depthOffset); 
 
     glBegin(GL_QUADS);
     // Top face (y = 1.0f)
@@ -64,27 +65,21 @@ void display() {
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-    float spacing = 2.3f; // Espaciado entre los cubos
+    float spacing = 2.3f;
 
-    
-    if (rotating) {
-        glPushMatrix();
-        glTranslatef(0.0f, spacing, 0.0f); 
-        glRotatef(rotationAngle, 0.0f, 1.0f, 0.0f); 
-        glTranslatef(0.0f, -spacing, 0.0f); 
-        for (int x = -1; x <= 1; ++x) {
-            for (int z = -1; z <= 1; ++z) {
-                drawCube(x * spacing, spacing, z * spacing); 
-            }
-        }
-        glPopMatrix();
-    }
-
-  
     for (int x = -1; x <= 1; ++x) {
         for (int y = -1; y <= 1; ++y) {
             for (int z = -1; z <= 1; ++z) {
-                if (!(y == 1 && rotating)) { 
+                if (rotating && rotatingColumn == x) {
+                    // Si la columna es la que está rotando
+                    glPushMatrix();
+                    glTranslatef(x * spacing, 0.0f, 0.0f);
+                    glRotatef(rotationAngle, 0.0f, 1.0f, 0.0f);
+                    glTranslatef(-x * spacing, 0.0f, 0.0f);
+                    drawCube(x * spacing, y * spacing, z * spacing);
+                    glPopMatrix();
+                }
+                else {
                     drawCube(x * spacing, y * spacing, z * spacing);
                 }
             }
@@ -92,17 +87,16 @@ void display() {
     }
     glutSwapBuffers();
 }
-
 void timer(int value) {
     if (rotating) {
-        rotationAngle += 5.0f;
+        rotationAngle += 2.5f;
         if (rotationAngle >= 90.0f) {
             rotationAngle = 0.0f;
             rotating = false;
         }
     }
     glutPostRedisplay();
-    glutTimerFunc(16, timer, 0);
+    glutTimerFunc(30, timer, 0);
 }
 
 void reshape(GLsizei width, GLsizei height) {
@@ -115,14 +109,10 @@ void reshape(GLsizei width, GLsizei height) {
 }
 
 void keyboard(unsigned char key, int x, int y) {
-    if (key == 'r') { 
-        rotating = true;
-    }
-    if (key == 'd') { 
-        depthOffset -= 0.1f;
-    }
-    if (key == 'f') { 
-        depthOffset += 0.1f;
+    switch (key) {
+    case '1': rotatingColumn = -1; rotating = true; break; // Columna izquierda
+    case '2': rotatingColumn = 0; rotating = true; break;  // Columna central
+    case '3': rotatingColumn = 1; rotating = true; break;  // Columna derecha
     }
 }
 
@@ -131,7 +121,7 @@ int main(int argc, char** argv) {
     glutInitDisplayMode(GLUT_DOUBLE);
     glutInitWindowSize(640, 480);
     glutInitWindowPosition(50, 50);
-    glutCreateWindow("Rubik's Cube with Depth Offset");
+    glutCreateWindow("Rubik's Cube");
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     glutKeyboardFunc(keyboard);
