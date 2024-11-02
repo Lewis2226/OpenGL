@@ -99,7 +99,7 @@ void display() {
 }
 
 void timer(int value) {
-    if (rotatingx || rotatingy) {
+    if (rotatingx || rotatingy || rotatingz) {
         rotationAngle += 2.5f;
         if (rotationAngle >= 90.0f) {
             rotationAngle = 0.0f;
